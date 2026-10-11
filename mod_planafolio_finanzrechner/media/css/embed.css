@@ -21,3 +21,7 @@
 .pft-consent-note a { color: inherit; }
 .pft-credit { margin: .5em 0 0; font-size: 12px; opacity: .8; }
 @media (prefers-reduced-motion: reduce) { .pft-consent-button { transition: none; } }
+/* Theme-Absatzstile (z. B. Olivero, Cassiopeia) nicht in den Platzhalter durchschlagen lassen. */
+.pft-embed .pft-consent p { margin: 0; }
+.pft-embed .pft-credit { margin: .5em 0 0; }
+.pft-embed iframe { display: block; max-width: 100%; }
