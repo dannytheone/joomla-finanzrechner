@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<updates>
+	<update>
+		<name>Planafolio Finanzrechner</name>
+		<description>Planafolio Finanzrechner 1.0.0</description>
+		<element>pkg_planafolio_finanzrechner</element>
+		<type>package</type>
+		<version>1.0.0</version>
+		<infourl title="Planafolio Finanzrechner">https://github.com/dannytheone/joomla-finanzrechner</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/dannytheone/joomla-finanzrechner/releases/download/1.0.0/pkg_planafolio_finanzrechner_1.0.0.zip</downloadurl>
+		</downloads>
+		<sha256>9030fe7e9b75ca9ad95abccd8670a46f105350ff22482d765dbddf26ac8a6005</sha256>
+		<maintainer>Planafolio</maintainer>
+		<maintainerurl>https://planafolio.com/rechner-einbetten</maintainerurl>
+		<targetplatform name="joomla" version="(5|6)\..*"/>
+		<php_minimum>8.1</php_minimum>
+	</update>
+</updates>

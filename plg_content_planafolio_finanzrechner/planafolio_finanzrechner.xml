@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="content" method="upgrade">
+	<name>PLG_CONTENT_PLANAFOLIO_FINANZRECHNER</name>
+	<author>Planafolio</author>
+	<creationDate>2026-10</creationDate>
+	<copyright>(C) 2026 Planafolio</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE</license>
+	<authorUrl>https://planafolio.com/rechner-einbetten</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_CONTENT_PLANAFOLIO_FINANZRECHNER_XML_DESCRIPTION</description>
+	<namespace path="src">Planafolio\Plugin\Content\Finanzrechner</namespace>
+	<files>
+		<folder plugin="planafolio_finanzrechner">services</folder>
+		<folder>src</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/plg_content_planafolio_finanzrechner.ini</language>
+		<language tag="en-GB">en-GB/plg_content_planafolio_finanzrechner.sys.ini</language>
+		<language tag="de-DE">de-DE/plg_content_planafolio_finanzrechner.ini</language>
+		<language tag="de-DE">de-DE/plg_content_planafolio_finanzrechner.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="usage" type="note" description="PLG_CONTENT_PLANAFOLIO_FINANZRECHNER_USAGE" class="alert alert-info"/>
+				<field name="theme" type="list" label="PLG_CONTENT_PLANAFOLIO_FINANZRECHNER_FIELD_THEME" default="light" validate="options">
+					<option value="light">PLG_CONTENT_PLANAFOLIO_FINANZRECHNER_THEME_LIGHT</option>
+					<option value="dark">PLG_CONTENT_PLANAFOLIO_FINANZRECHNER_THEME_DARK</option>
+				</field>
+				<field name="lang" type="list" label="PLG_CONTENT_PLANAFOLIO_FINANZRECHNER_FIELD_LANG" default="auto" validate="options">
+					<option value="auto">PLG_CONTENT_PLANAFOLIO_FINANZRECHNER_LANG_AUTO</option>
+					<option value="de">PLG_CONTENT_PLANAFOLIO_FINANZRECHNER_LANG_DE</option>
+					<option value="en">PLG_CONTENT_PLANAFOLIO_FINANZRECHNER_LANG_EN</option>
+				</field>
+				<field name="height" type="number" label="PLG_CONTENT_PLANAFOLIO_FINANZRECHNER_FIELD_HEIGHT" default="640" min="200" max="3000" step="10" filter="integer"/>
+				<field name="consent" type="radio" layout="joomla.form.field.radio.switcher" label="PLG_CONTENT_PLANAFOLIO_FINANZRECHNER_FIELD_CONSENT" description="PLG_CONTENT_PLANAFOLIO_FINANZRECHNER_FIELD_CONSENT_DESC" default="1" filter="integer">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="credit" type="radio" layout="joomla.form.field.radio.switcher" label="PLG_CONTENT_PLANAFOLIO_FINANZRECHNER_FIELD_CREDIT" description="PLG_CONTENT_PLANAFOLIO_FINANZRECHNER_FIELD_CREDIT_DESC" default="0" filter="integer">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

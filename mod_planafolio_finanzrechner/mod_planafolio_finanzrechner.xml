@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" client="site" method="upgrade">
+	<name>MOD_PLANAFOLIO_FINANZRECHNER</name>
+	<author>Planafolio</author>
+	<creationDate>2026-10</creationDate>
+	<copyright>(C) 2026 Planafolio</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE</license>
+	<authorUrl>https://planafolio.com/rechner-einbetten</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_PLANAFOLIO_FINANZRECHNER_XML_DESCRIPTION</description>
+	<namespace path="src">Planafolio\Module\Finanzrechner</namespace>
+	<files>
+		<folder module="mod_planafolio_finanzrechner">services</folder>
+		<folder>src</folder>
+		<folder>tmpl</folder>
+	</files>
+	<media destination="mod_planafolio_finanzrechner" folder="media">
+		<filename>joomla.asset.json</filename>
+		<folder>css</folder>
+		<folder>js</folder>
+	</media>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/mod_planafolio_finanzrechner.ini</language>
+		<language tag="en-GB">en-GB/mod_planafolio_finanzrechner.sys.ini</language>
+		<language tag="de-DE">de-DE/mod_planafolio_finanzrechner.ini</language>
+		<language tag="de-DE">de-DE/mod_planafolio_finanzrechner.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="tool" type="list" label="MOD_PLANAFOLIO_FINANZRECHNER_FIELD_TOOL" default="sparplanrechner" validate="options">
+					<option value="sparplanrechner">MOD_PLANAFOLIO_FINANZRECHNER_TOOL_SPARPLANRECHNER</option>
+					<option value="zinseszinsrechner">MOD_PLANAFOLIO_FINANZRECHNER_TOOL_ZINSESZINSRECHNER</option>
+					<option value="kapitalertragsteuer-rechner">MOD_PLANAFOLIO_FINANZRECHNER_TOOL_KAPITALERTRAGSTEUER_RECHNER</option>
+					<option value="vorabpauschale-rechner">MOD_PLANAFOLIO_FINANZRECHNER_TOOL_VORABPAUSCHALE_RECHNER</option>
+					<option value="freistellungsauftrag-rechner">MOD_PLANAFOLIO_FINANZRECHNER_TOOL_FREISTELLUNGSAUFTRAG_RECHNER</option>
+					<option value="dividenden-rechner">MOD_PLANAFOLIO_FINANZRECHNER_TOOL_DIVIDENDEN_RECHNER</option>
+					<option value="etf-kosten-rechner">MOD_PLANAFOLIO_FINANZRECHNER_TOOL_ETF_KOSTEN_RECHNER</option>
+					<option value="entnahmerechner">MOD_PLANAFOLIO_FINANZRECHNER_TOOL_ENTNAHMERECHNER</option>
+					<option value="finanzielle-freiheit-rechner">MOD_PLANAFOLIO_FINANZRECHNER_TOOL_FINANZIELLE_FREIHEIT_RECHNER</option>
+					<option value="rentenluecke-rechner">MOD_PLANAFOLIO_FINANZRECHNER_TOOL_RENTENLUECKE_RECHNER</option>
+					<option value="altersvorsorgedepot">MOD_PLANAFOLIO_FINANZRECHNER_TOOL_ALTERSVORSORGEDEPOT</option>
+					<option value="fruehstart-rente-rechner">MOD_PLANAFOLIO_FINANZRECHNER_TOOL_FRUEHSTART_RENTE_RECHNER</option>
+					<option value="inflationsrechner">MOD_PLANAFOLIO_FINANZRECHNER_TOOL_INFLATIONSRECHNER</option>
+					<option value="einmalanlage-oder-sparplan">MOD_PLANAFOLIO_FINANZRECHNER_TOOL_EINMALANLAGE_ODER_SPARPLAN</option>
+					<option value="tilgen-oder-investieren">MOD_PLANAFOLIO_FINANZRECHNER_TOOL_TILGEN_ODER_INVESTIEREN</option>
+					<option value="rebalancing-rechner">MOD_PLANAFOLIO_FINANZRECHNER_TOOL_REBALANCING_RECHNER</option>
+					<option value="musterportfolios">MOD_PLANAFOLIO_FINANZRECHNER_TOOL_MUSTERPORTFOLIOS</option>
+					<option value="xirr-rechner">MOD_PLANAFOLIO_FINANZRECHNER_TOOL_XIRR_RECHNER</option>
+					<option value="ttwror-rechner">MOD_PLANAFOLIO_FINANZRECHNER_TOOL_TTWROR_RECHNER</option>
+				</field>
+				<field name="theme" type="list" label="MOD_PLANAFOLIO_FINANZRECHNER_FIELD_THEME" default="light" validate="options">
+					<option value="light">MOD_PLANAFOLIO_FINANZRECHNER_THEME_LIGHT</option>
+					<option value="dark">MOD_PLANAFOLIO_FINANZRECHNER_THEME_DARK</option>
+				</field>
+				<field name="lang" type="list" label="MOD_PLANAFOLIO_FINANZRECHNER_FIELD_LANG" default="auto" validate="options">
+					<option value="auto">MOD_PLANAFOLIO_FINANZRECHNER_LANG_AUTO</option>
+					<option value="de">MOD_PLANAFOLIO_FINANZRECHNER_LANG_DE</option>
+					<option value="en">MOD_PLANAFOLIO_FINANZRECHNER_LANG_EN</option>
+				</field>
+				<field name="height" type="number" label="MOD_PLANAFOLIO_FINANZRECHNER_FIELD_HEIGHT" description="MOD_PLANAFOLIO_FINANZRECHNER_FIELD_HEIGHT_DESC" default="640" min="200" max="3000" step="10" filter="integer"/>
+				<field name="consent" type="radio" layout="joomla.form.field.radio.switcher" label="MOD_PLANAFOLIO_FINANZRECHNER_FIELD_CONSENT" description="MOD_PLANAFOLIO_FINANZRECHNER_FIELD_CONSENT_DESC" default="1" filter="integer">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="credit" type="radio" layout="joomla.form.field.radio.switcher" label="MOD_PLANAFOLIO_FINANZRECHNER_FIELD_CREDIT" description="MOD_PLANAFOLIO_FINANZRECHNER_FIELD_CREDIT_DESC" default="0" filter="integer">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" class="form-select" validate="moduleLayout"/>
+				<field name="moduleclass_sfx" type="textarea" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" rows="3" validate="CssIdentifier"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

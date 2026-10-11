@@ -1,0 +1,10 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "mod_planafolio_finanzrechner",
+  "version": "1.0.0",
+  "license": "GPL-2.0-or-later",
+  "assets": [
+    { "name": "mod_planafolio_finanzrechner.embed", "type": "style", "uri": "mod_planafolio_finanzrechner/embed.css" },
+    { "name": "mod_planafolio_finanzrechner.embed", "type": "script", "uri": "mod_planafolio_finanzrechner/embed.js", "attributes": { "defer": true } }
+  ]
+}
